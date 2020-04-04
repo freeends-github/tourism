@@ -92,6 +92,7 @@ a.more-link{
   border-bottom: solid 2px #212121;
   color: #212121;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 .more-link:hover,.more-link:active{
   // border: solid 2px #212121;
@@ -249,6 +250,20 @@ main{
       .abudhabi-bg{
         background-image: url(../img/mountain-brown.png);
       }
+      .ra-k{
+        align-items: flex-start;
+        text-align: left;
+        margin-left: 15vw;
+      }
+      .dubai{
+        align-items: center;
+        text-align: center;
+      }
+      .abudhabi{
+        align-items: flex-end;
+        text-align: end;
+        margin-right: 15vw;
+      }
     }
     h3{
       margin: 25px 0;
@@ -263,22 +278,25 @@ main{
     p{
       margin-bottom: 25px;
     }
-    .ra-k{
-      align-items: flex-start;
-      text-align: left;
-    }
-    .dubai{
-      align-items: center;
-      text-align: center;
-    }
-    .abudhabi{
-      align-items: flex-end;
-      text-align: end;
-    }
   }
   .hotels{
     background-color: #FBFBFB;
-    padding-top: 60px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    
+    .arrows{
+      display: flex;
+      width: 12%;
+      justify-content: space-between;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+    .card{
+      width:30%;
+      margin: 0 15px;
+      
+    }
     h2{
       font-size: 28px;
       font-weight: 400;

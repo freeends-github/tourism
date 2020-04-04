@@ -1,6 +1,4 @@
-$(document).ready(function(){
-  $('.hotel-carousel').slick();
-});
+
 
 // $(".search_div button").on("click", function() {
 //   $(".input_div input").toggleClass("showSearch");
