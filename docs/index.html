@@ -8,10 +8,22 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="../img/logo-header.png" />
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"
+        />
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
+        />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
-        <title>Basic - Bootstrap 4 with Gulp 4</title>
+        <title>Tourism</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Karma:wght@400;700&family=Open+Sans&display=swap');
+        </style>
     </head>
     
     <body>
@@ -28,10 +40,37 @@
 
                             </li>
                             <li>
+                                <!-- <div class="input-div">
+
+                  <input type="search" name="" id="search-input" placeholder="Search">
+
+                </div>
+
+                <div class="search_div"> -->
                                 <button class="search-btn">
                                     <img src="../img/search@2x.png" alt="search icon">
                                 </button>
+                                <!-- </div> -->
                             </li>
+                            <!-- <div class="input_div">
+
+							<input type="search" name="" id="search_input" placeholder="Search">
+
+						</div>
+
+						<div class="search_div">
+
+								<button>
+
+									<i class="fas fa-search"></i>
+
+									<p>Search</p>
+
+								</button>
+
+            </div>
+
+          -->
                         </ul>
                     </nav>
                 </div>
@@ -61,8 +100,8 @@
             </section>
             <section class="info_about">
                 <div class="container">
-                    <div class="info">
-                        <div class="info_item">
+                    <div class="info row">
+                        <div class="info_item col-sm-4">
                             <div>
                                 <img src="./img/pointer@2x.png" alt="pointer">
                             </div>
@@ -70,7 +109,7 @@
                             <p>Li said he hoped Beijing’s latest air pollution crisis would also remind
                                 the public that while.</p>
                         </div>
-                        <div class="info_item unic">
+                        <div class="info_item unic col-sm-4">
                              <h3>Plane</h3>
                             <p>Sandstorms have traditionally been a problem for Beijing and for the northern
                                 part of China.</p>
@@ -78,13 +117,85 @@
                                 <img src="./img/plane@2x.png" alt="plane">
                             </div>
                         </div>
-                        <div class="info_item">
+                        <div class="info_item col-sm-4">
                             <div>
                                 <img src="./img/map@2x.png" alt="map">
                             </div>
                              <h3>map</h3>
                             <p>Last December tens of thousands of smog refugees were forced to flee China’s
                                 pollution-stricken.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cities">
+                <div class="grid-container">
+                    <div class="grid-item_img card">
+                        <div class="card-img-top ra-k-bg"></div>
+                        <div class="card-body ra-k">
+                             <h3 class="card-title">Ras al-khaimah</h3>
+                            <p class="card-text">Li said he hoped Beijing’s latest air pollution crisis.</p> <a href="#"
+                            class="more-link">view</a>
+                        </div>
+                    </div>
+                    <div class="grid-item_img card">
+                        <div class="card-img-top dubai-bg"></div>
+                        <div class="card-body dubai">
+                             <h3 class="card-title">dubai</h3>
+                            <p class="card-text">Sandstorms have traditionally been a problem for Beijing.</p> <a href="#"
+                            class="more-link">view</a>
+                        </div>
+                    </div>
+                    <div class="grid-item_img card">
+                        <div class="card-img-top abudhabi-bg"></div>
+                        <div class="card-body abudhabi">
+                             <h3 class="card-title">Abu dhabi</h3>
+                            <p class="card-text">Last December tens of thousands of smog refugees were..</p> <a href="#"
+                            class="more-link">view</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hotels">
+                <div class="container">
+                     <h2>hotels</h2>
+                    <div id="hotel-container" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, autoplay: true, autoplaySpeed: 2000,}'
+                    class="hotel-carousel">
+                        <div class="card" style="width: 30%;">
+                            <img class="card-img-top" src="./img/nihi sumba.png" alt="Card image cap">
+                            <div class="card-body">
+                                 <h3 class="card-title">NIHI SUMBA</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                                <div><span><hr></span>
+                                    <h3>$ 67</h3><span><hr></span>
+                                </div>
+                                <button class="btn btn-primary btn1">book now</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30%;">
+                            <img class="card-img-top" src="img/the brando.png" alt="Card image cap">
+                            <div class="card-body">
+                                 <h3 class="card-title">THE brando</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                                <div><span><hr></span>
+                                    <h3>$ 67</h3><span><hr></span>
+                                </div>
+                                <button class="btn btn-primary btn1">book now</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30%;">
+                            <img class="card-img-top" src="img/zadafa camp.png" alt="Card image cap">
+                            <div class="card-body">
+                                 <h3 class="card-title">zarafa camp</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                                <div><span><hr></span>
+                                    <h3>$ 67</h3><span><hr></span>
+                                </div>
+                                <button class="btn btn-primary btn1">book now</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,13 +223,18 @@
                             <p>&copy; 2018 Tourism. All rights reserved</p>
                         </div>
                     </div>
-                    <div class="social-media_icons"> <i class="fa fa-twitter lg" style="font-size: 1.2em; margin-left: 0.5em;"
-                        aria-hidden="true"></i>  <i class="fa fa-facebook lg" style="font-size: 1.2em; margin-left: 0.5em;"
+                    <div class="social-media_icons"> <i class="fa fa-twitter lg" style="font-size: 1.2em; color:#9E9E9E; margin-left: 1em;"
+                        aria-hidden="true"></i>  <i class="fa fa-facebook lg" style="font-size: 1.2em; color: #9E9E9E; margin-left: 1em;"
                         aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+        <script>
+            $('.hotel-carousel').slick();
+        </script>
         <script src="js/all.js"></script>
     </body>
 

@@ -13,19 +13,92 @@ li{
     color: #212121;
   }
 }
+p{
+  font-size: 15px;
+  color: #9E9E9E;
+  font-family: 'Karma', serif;
+  font-weight: 400;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+}
+
+h3{
+  margin: 25px 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 3px;
+
+}
 a{
   text-decoration: none;
 }
+// 
+// .input_div{
+// 	margin-left:0 !important;
+// }
+// .showSearch {
+// 	width: 300px !important;
+// 	padding: 10px 20px !important;
+// 	border: 1px solid gray !important;
+// }
+// .showSearch2{
+// 	width:250px !important;
+// 	padding: 10px 20px !important;
+// 	border: 1px solid gray !important;
+// }
+// .input_div input.showSearch + .list_div {
+// 	display: none;
+// 	transition-delay: 5s;
+// }
+// .input_div input.showSearch + .second_header_second_div{
+// 	justify-content: flex-end;
+// }
+// .input_div input{
+// 	border-radius:40px;
+// 	outline: none;
+// 	/* padding:10px 20px; */
+// 	border:none;
+// 	font-size:14px;
+// 	transition-duration: 300ms;
+// 	transition-timing-function: linear;
+// 	font-family: 'Roboto', sans-serif;
+// 	/* display:none; */
+// 	width:0;
+// }
+// 
+// 
 .black-btn{
   text-transform: uppercase;
   color: white;
-  background-color: #000;
+  background: none;
   padding: 15px 30px;
   border: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.8s;
+  background-color: #212121;
 }
+.black-btn:hover{
+  color: #212121;
+  background-color: white;
+  border: 1px solid #212121;  
+}
+
 a.more-link{
   padding: 10px;
   border-bottom: solid 2px #212121;
+  color: #212121;
+  transition: 0.5s;
+}
+.more-link:hover,.more-link:active{
+  // border: solid 2px #212121;
+  padding-bottom: 6px;
+  text-decoration: none;
+  color: #212121;
+  
 }
 header{
   padding-top: 35px;
@@ -57,6 +130,8 @@ header{
     h1{
       font-size: 80px;
       margin-bottom: 30px;
+      font-family: 'Julius Sans One', sans-serif;
+      font-weight: 400;
     }
     p{
       font-size: 16px;
@@ -96,6 +171,10 @@ main{
           padding: 35px 0;
           line-height: 25px;
         }
+        h2{
+          font-family: 'Julius Sans One', sans-serif;
+          font-weight: 400;
+        }
       }
     }
   }
@@ -104,8 +183,8 @@ main{
       display: flex;
       justify-content: space-between;
       width: 100%;
-      margin-top: 130px;
-      margin-bottom: 130px;
+      margin-top: 110px;
+      margin-bottom: 110px;
       flex-wrap: nowrap;
       .info_item{
         display: flex;
@@ -113,6 +192,11 @@ main{
         flex-direction: column;
         text-align: center;
         align-items: center;
+        h3{
+          font-family: 'Julius Sans One', sans-serif;
+          font-weight: 400;
+          margin: 25px 0;
+        }
         &.unic{
           p{
             margin: 25px 0;
@@ -120,14 +204,9 @@ main{
           }
           h3{
             margin: 0;
+            font-family: 'Julius Sans One', sans-serif;
+            font-weight: 400;
           }
-        }
-        h3{
-          margin: 25px 0;
-          text-transform: uppercase;
-          font-size: 20px;
-          font-weight: 400;
-          letter-spacing: 3px;
         }
         &>div{
           width: 10em;
@@ -137,11 +216,118 @@ main{
           display: flex;
           justify-content: center;
           align-items: center;
-          p{
-            font-size: 14px;
-            color: #9E9E9E;
-          }
-          
+        }
+      }
+    }
+  }
+  .cities{
+    padding-bottom: 110px;
+    .grid-container{
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-rows: 550px;
+      
+    }
+    .grid-item_img{
+      border-radius: 0;
+      border: none;
+      
+      .card-img-top{
+        width: 100%;
+        height: 69.69%;
+        border-radius: 0;
+        background-repeat: repeat;
+        background-size: 100% 100%;
+        background-position: center;
+      }
+      .dubai-bg{
+        background-image: url(../img/desert.png);
+      }
+      .ra-k-bg{
+        background-image: url(../img/mountain-green.png);
+      }
+      .abudhabi-bg{
+        background-image: url(../img/mountain-brown.png);
+      }
+    }
+    h3{
+      margin: 25px 0;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      font-family: 'Julius Sans One', sans-serif;
+      font-weight: 400;
+      
+    }
+    p{
+      margin-bottom: 25px;
+    }
+    .ra-k{
+      align-items: flex-start;
+      text-align: left;
+    }
+    .dubai{
+      align-items: center;
+      text-align: center;
+    }
+    .abudhabi{
+      align-items: flex-end;
+      text-align: end;
+    }
+  }
+  .hotels{
+    background-color: #FBFBFB;
+    padding-top: 60px;
+    h2{
+      font-size: 28px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 60px;
+      font-family: 'Julius Sans One', sans-serif;
+      font-weight: 400;
+    }
+    .btn1{
+      background: none;
+      border: 1px solid #212121 ;
+      color: #212121;
+      border-radius: 0;
+      padding: 15px 37px;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      transition: 0.8s;
+      overflow: hidden;
+    }
+    .btn1:hover{
+       color: white;
+       background-color: #212121;
+    }
+    .card-body{
+      text-align: center;
+      h3{
+        margin: 25px 0;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: 400;
+        
+      }
+      &>div{
+        display: grid;
+        grid-template-columns: 35% 30% 35%;
+        align-items: center;
+        align-content: center;
+        h3{
+          font-family: 'Karma', serif;
+          font-weight: 700;
+        }
+        p{
+          text-align: center;
+          justify-self: center;
         }
       }
     }
@@ -154,7 +340,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 25px;
-    align-content: center;
+    align-items: center;
     .footer-nav{
       ul{
         display: flex;
@@ -167,15 +353,27 @@ footer{
       }
     }
     .header{
-      text-align: center;
+      display: flex;
+      justify-content: center;
       div{
         text-align: right;
+        h2{
+          font-size: 28px;
+          font-weight: 400;
+          color: #9E9E9E;
+        }
+        p{
+          font-size: 10px;
+        }
       }
     }
     .social-media_icons{
       display: flex;
       justify-content: flex-end;
       padding-right: 10px;
+      i:hover{
+        cursor: pointer;
+      }
     }
   }
 }
