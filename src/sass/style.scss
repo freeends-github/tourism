@@ -1,0 +1,550 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.hero_section{
+    background-image:url(../img/aa.png);
+    background-position: center;
+    background-size: cover;
+    .hero_container{
+        width:60%;
+        margin:auto;
+        overflow:hidden;
+            .header{
+                margin-top:44px;
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+                .header_headline{
+                    position: relative;
+                    h1{
+                        font: 400 45px/60px Open Sans;
+                        letter-spacing: 0px;
+                        color: #212121;
+                        opacity: 1;
+                        position:relative;
+                        z-index:2;
+                    }
+                    .circle{
+                        width:64px;
+                        height:64px;
+                        border-radius:50%;
+                        background-color:#FFF700;
+                        position:absolute;
+                        top:0;
+                        left:50%;
+                        transform:translateX(-50%);
+                    }
+                }
+                .header_list_container{
+                    display:flex;
+                    align-items:center;
+                    .header_list{
+                        display:flex;
+                        align-items:center;
+                        transition-delay:2s;
+                        li{
+                            margin-left:48px;
+                            a{
+                                font: 400 14px/19px Open Sans;
+                                letter-spacing: 5.6px;
+                                color: #212121;
+                                opacity: 1;
+                                position:relative;
+                                &::after{
+                                    content:"";
+                                    display:block;
+                                    position:absolute;
+                                    bottom:-3px;
+                                    left:-8%;
+                                    width:110%;
+                                    height:2px;
+                                    background-color:#212121;
+                                    transform:scaleX(0);
+                                    transform-origin:100% 50%;
+                                    transition:transform 0.3s ease-in-out;
+                                }
+                                &:hover::after{
+                                    height:2px;
+                                    transform:scaleX(1);
+                                    transform-origin:0 50%;
+                                }
+                            }
+                        }
+                        &.vanish{
+                            display:none;
+                        }
+                    }
+                    .search{
+                        position:relative;
+                        margin-left:48px;
+                        margin-right:10px;
+                        input{
+                            width:35px;
+                            height:35px;
+                            outline:none;
+                            border:2px solid #E8E8E8;
+                            border-radius:50%;
+                            transition:width 0.2s ease-in-out, border-radius 0.5s ease-in-out, padding 0.2s;
+                            font: 400 17px/27px Open Sans;
+                            letter-spacing: 0px;
+                            color: #212121;
+                            opacity: 1;
+                            &.open{
+                                width:300px;
+                                position:unset;
+                                padding:5px 30px 5px 15px;
+                                border-radius:20px;
+                                &::placeholder{
+                                    opacity:1;
+                                }
+                            }
+                            &::placeholder{
+                                font: 400 17px/27px Open Sans;
+                                letter-spacing: 0px;
+                                color: #212121;
+                                opacity: 0;
+                                transition-delay:0.3s;
+                                transition:opacity 0.2s ease-in-out;
+                            }
+                        }
+                        .search_button{
+                            background:transparent;
+                            outline:none;
+                            border:none;
+                            cursor:pointer;
+                            position:absolute;
+                            top:0;
+                            right:0;
+                            width:35px;
+                            height:35px;
+                            &::before{
+                                content: "";
+                                width: 2px;
+                                height: 15px;
+                                background: #E8E8E8;
+                                position: absolute;
+                                transform: rotate(-45deg);
+                                bottom: -10px;
+                                right: -2px;
+                                transition: 0.3s;
+                            }
+                            &.rotate{
+                               &::before{
+                                   transform:translate(-20px,-18px) rotate(-45deg);
+                                   background: #212121;
+                                   width:1px;
+                               }
+                               &::after{
+                                    content: "";
+                                    width: 1px;
+                                    height: 15px;
+                                    background: #212121;
+                                    position: absolute;
+                                    transform: rotate(45deg);
+                                    bottom:9px;
+                                    right: 18px;
+                                    transition: 0.3s;
+                               }
+                            }
+                        }
+                    }
+                }
+            }
+            .hero_info{
+                margin:110px 0 144px 0;
+                width:44%;
+                h2{
+                    font: 400 94px/125px Julius Sans One;
+                    letter-spacing: 5.26px;
+                    color: #212121;
+                    opacity: 1;
+                    font-weight:bold;
+                }
+                p{  
+                    margin-top:45px;
+                    font: 400 18px/27px Karma;
+                    letter-spacing: 0px;
+                    color: #9E9E9E;
+                    opacity: 1;
+                }
+                a{
+                    margin-top:64px;
+                    font: 400 14px/19px Open Sans;
+                    letter-spacing: 1.68px;
+                    color: #FFFFFF;
+                    opacity: 1;
+                    display:inline-block;
+                    padding:18px 48px;
+                    background-color:#212121;
+                    border:1px solid #212121;
+                    transition:all 300ms ease-in;
+                    &:hover{
+                        background-color:transparent;
+                        color:#212121;
+                    }
+                }
+            }
+    }
+}
+.about_section{
+    overflow:hidden;
+    background-image: url(../img/bb.png);
+    background-position: center;
+    background-size:cover;
+    .about_container{
+        width:60%;
+        margin:225px auto 45px auto;
+        display:flex;
+        height:427px;
+        .about_img{
+            width:34%;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .about_info{
+            background-color:white;
+            display:flex;
+            flex-flow:column;
+            align-items:center;
+            justify-content: center;
+            width:66%;
+            padding:0 8%;
+            h2{
+                font: 400 32px/43px Julius Sans One;
+                letter-spacing: 3.84px;
+                color: #212121;
+                opacity: 1;
+                font-weight: bold;
+            }
+            p{  
+                margin-top:40px;
+                text-align: center;
+                font: 400 18px/27px Karma;
+                letter-spacing: 0px;
+                color: #9E9E9E;
+                opacity: 1;
+            }
+            a{  
+                margin-top:56px;
+                font: 400 14px/19px Open Sans;
+                letter-spacing: 1.68px;
+                color: #212121;
+                opacity: 1;
+                text-transform: uppercase;
+                position: relative;
+                &::after{
+                    content:"";
+                    display:block;
+                    position: absolute;
+                    bottom:-3px;
+                    left:-25%;
+                    transform:translateX(18%);
+                    height:2px;
+                    width:110%;
+                    background-color:#212121;
+                }
+            }
+        }
+    }
+}
+.trip_section{
+    overflow:hidden;
+    .trip_container{
+        width:60%;
+        margin:125px auto;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        // grid-column-gap: 176px;
+        grid-column-gap:16%;
+        .trip_imgs{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            background-color:#FBFBFB;
+            width:160px;
+            height:160px;
+            margin:auto;
+            border-radius:50%;
+        }
+        .trip_info{
+            padding-top:35px;
+            h2{ 
+                font: 400 23px/31px Julius Sans One;
+                letter-spacing: 2.76px;
+                color: #212121;
+                opacity: 1;
+                text-align:center;
+            }
+            p{
+                text-align: center;
+                font: 400 16px/24px Karma;
+                letter-spacing: 0px;
+                color: #9E9E9E;
+                opacity: 1;
+                margin-top:23px;
+            }
+        }
+        .trip_item{
+            padding-top:0;
+            padding-bottom:35px;
+        }
+    }
+}
+.places_section{
+    .places_imgs{
+        display:flex;
+        .places_img1,
+        .places_img3{
+            width:40%;
+        }
+        .places_img2{
+            width:20%;
+        }
+    }
+    .places_container{
+        width:60%;
+        margin:43px auto 0 auto;
+        display:flex;
+        justify-content: space-between;
+        .places_info{
+            width:24%;
+            display:flex;
+            flex-flow:column;
+            justify-content: flex-start;
+            h2{
+                font: 400 23px/31px Julius Sans One;
+                letter-spacing: 2.76px;
+                color: #212121;
+                opacity: 1;
+                font-weight:bold;
+            }
+            p{  
+                margin-top:23px;
+                font: 400 16px/24px Karma;
+                letter-spacing: 0px;
+                color: #9E9E9E;
+                opacity: 1;
+            }
+            a{
+                margin-top:24px;
+                font: 400 14px/19px Open Sans;
+                letter-spacing: 1.68px;
+                color: #212121;
+                opacity: 1;
+                position:relative;
+                &::after{
+                    content:"";
+                    display:block;
+                    position: absolute;
+                    bottom:-8px;
+                    left:-25%;
+                    transform:translateX(13%);
+                    height:2px;
+                    width:120%;
+                    background-color:#212121;
+                }
+            }
+        }
+        .places_info1{
+            align-items:flex-start;
+            h2,p,a{
+                text-align:left;
+            }
+        }
+        .places_info2{
+            align-items:center;
+            h2,p,a{
+                text-align:center;
+            }
+        }
+        .places_info3{
+            align-items:flex-end;
+            h2,p,a{
+                text-align:right;
+            }
+        }
+    }
+}
+.hotel_section{
+    overflow:hidden;
+    margin-top:128px;
+    background-color:#FBFBFB;
+    .hotel_container{
+        width:60%;
+        margin:73px auto 80px auto;
+        overflow:hidden;
+        h1{
+            text-align:center;
+            font: 400 32px/43px Julius Sans One;
+            letter-spacing: 3.84px;
+            color: #212121;
+            opacity: 1;
+            font-weight:bold;
+        }
+        .hotel_items{
+            margin-top:80px;
+            // background:lightcoral;
+            .hotel_item{
+                display:inline-flex;
+                flex-flow:column;
+                align-items:flex-start;
+                justify-content:flex-start;
+                margin:0 15px;
+                outline:none;
+                .hotel_img{
+                    height:200px;
+                    width:100%;
+                    img{
+                        width:100%;
+                        height:100%;
+                    }
+                }
+                .hotel_info{
+                    background-color:white;
+                    display:flex;
+                    flex-flow:column;
+                    align-items:center;
+                    justify-content: flex-start;
+                    padding:27px 0 40px 0;
+                    h2{
+                        font: 400 23px/31px Julius Sans One;
+                        letter-spacing: 2.76px;
+                        color: #212121;
+                        opacity: 1;
+                        text-align:center;
+                    }
+                    p{
+                        text-align: center;
+                        font: 400 16px/24px Karma;
+                        letter-spacing: 0px;
+                        color: #9E9E9E;
+                        opacity: 1;
+                        padding:0 10px;
+                        margin-top:23px;
+                    }
+                    .hotel_price{
+                        margin-top:23px;
+                        h3{
+                            font: 700 24px/32px Karma;
+                            letter-spacing: 2.88px;
+                            color: #212121;
+                            opacity: 1;
+                            text-align:center;
+                        }
+                    }
+                    button{
+                        margin-top:35px;
+                        background-color:transparent;
+                        font: 400 14px/19px Open Sans;
+                        letter-spacing: 1.68px;
+                        color: #212121;
+                        opacity: 1;
+                        padding:18px 40px;
+                        border:1px solid #212121;
+                        outline:none;
+                        transition: all 300ms ease-in;
+                        &:hover{
+                            background-color:#212121;
+                            color:white;
+                            border:1px solid white;
+                        }
+                    }
+                }
+            }
+        }
+        .hotel_arrows{
+            width:100%;
+            display:flex;
+            justify-content: center;
+            margin-top:80px;
+            button{
+                background:transparent;
+                border:none;
+                outline:none;
+                i{
+                    font-size:20px;
+                    cursor: pointer;
+                }
+            }
+            .left_arrow{
+                margin-right:48px;
+            }
+            .right_arrow{
+                margin-left:48px;
+            }
+        }
+    }
+}
+.footer{
+    overflow:hidden;
+    .footer_container{
+        width:60%;
+        margin:auto;
+        padding:65px 0;
+        background-color:#fff;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        .footer_list{
+            display:flex;
+            justify-content: flex-start;
+            align-items:center;
+            li{
+                margin-right:48px;
+                &:last-child{
+                    margin-right:0;
+                }
+                a{
+                    font: 400 14px/19px Open Sans;
+                    letter-spacing: 5.6px;
+                    color: #212121;
+                    opacity: 1;
+                }
+            }
+        }
+        .copyright_part{
+                h2{ 
+                    text-align: center;
+                    font: 400 32px/43px Open Sans;
+                    letter-spacing: 0px;
+                    color: #9E9E9E;
+                    opacity: 1;
+                }
+                p{
+                    text-align: center;
+                    font: 400 11px/15px Open Sans;
+                    letter-spacing: 0px;
+                    color: #9E9E9E;
+                    opacity: 1;
+                }
+        }
+        .media_part{
+            a{  
+                margin-left:32px;
+                &:first-child{
+                    margin-left:0;
+                }
+                i{
+                    color:#9E9E9E;
+                    font-size:20px;
+                }
+            }
+        }
+    }
+}
