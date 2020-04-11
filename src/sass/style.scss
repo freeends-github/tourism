@@ -99,6 +99,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                             border:2px solid #E8E8E8;
                             border-radius:50%;
                             transition:width 0.2s ease-in-out, border-radius 0.5s ease-in-out, padding 0.2s;
+                            transition-delay: 0.2s;
                             font: 400 17px/27px Open Sans;
                             letter-spacing: 0px;
                             color: #212121;
@@ -107,7 +108,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                                 width:300px;
                                 position:unset;
                                 padding:5px 30px 5px 15px;
-                                border-radius:20px;
+                                border-radius:5px;
                                 &::placeholder{
                                     opacity:1;
                                 }
@@ -117,8 +118,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                                 letter-spacing: 0px;
                                 color: #212121;
                                 opacity: 0;
-                                transition-delay:0.3s;
                                 transition:opacity 0.2s ease-in-out;
+                                transition-delay:0.3s;
                             }
                         }
                         .search_button{
@@ -209,12 +210,20 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         width:60%;
         margin:225px auto 45px auto;
         display:flex;
-        height:427px;
+        justify-content:flex-start;
+        align-items:center;
+        height:409px;
         .about_img{
             width:34%;
+            max-height:100%;
+            // height:100%;
+            // background-image:url(../img/MaskGroup2.png);
+            // background-position:center;
+            // background-size:contain;
+            // background-repeat:no-repeat;
             img{
                 width:100%;
-                height:100%;
+                object-fit: contain;
             }
         }
         .about_info{
@@ -224,6 +233,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             align-items:center;
             justify-content: center;
             width:66%;
+            height:100%;
             padding:0 8%;
             h2{
                 font: 400 32px/43px Julius Sans One;
@@ -300,7 +310,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                 margin-top:23px;
             }
         }
-        .trip_item{
+        .trip_item1{
             padding-top:0;
             padding-bottom:35px;
         }
@@ -459,6 +469,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                         border:1px solid #212121;
                         outline:none;
                         transition: all 300ms ease-in;
+                        cursor:pointer;
+                        position:relative;
                         &:hover{
                             background-color:#212121;
                             color:white;
@@ -495,8 +507,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     overflow:hidden;
     .footer_container{
         width:60%;
-        margin:auto;
-        padding:65px 0;
+        margin:65px auto;
         background-color:#fff;
         display:flex;
         justify-content: space-between;
@@ -543,6 +554,264 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                 i{
                     color:#9E9E9E;
                     font-size:20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1300px){
+    .container{
+        width:80% !important;
+    }
+}
+@media only screen and (max-width:1080px){
+    .hero_section{
+        .hero_container{
+            .header{
+                .header_headline{
+                    h1{
+                        font: 400 38px/50px Open Sans;
+                    }
+                }
+            }
+            .hero_info{
+                width:57%;
+                h2{
+                    font: 400 82px/98px Julius Sans One;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+    .trip_section{
+        .trip_container{
+            grid-column-gap:12%;
+            .trip_imgs{
+                width:145px;
+                height:145px;
+            }
+        }
+    }
+    .hotel_section{
+        .hotel_container{
+            .hotel_items{
+                .hotel_item{
+                    margin:0 20px;
+                    .hotel_info{
+                        p{
+                            padding:0 5px;
+                            font: 400 17px/24px Karma;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:870px){
+    .container{
+        width:85% !important;
+    }
+    .hero_section{
+        .hero_container{
+            .header{
+                .header_headline{
+                    h1{
+                        font: 400 38px/50px Open Sans;
+                    }
+                }
+            }
+            .hero_info{
+                margin:100px 0 90px 0;
+                h2{
+                    font: 400 67px/68px Julius Sans One;
+                    font-weight: bold;
+                }
+                a{
+                    padding:15px 34px;
+                }
+            }
+        }
+    }
+    .about_section{
+        .about_container{
+            flex-flow:column;
+            height:unset;
+            .about_img{
+                width:50%;
+            }
+            .about_info{
+                width:85%;
+                padding-top:30px;
+                padding-bottom:30px;
+                margin-top:20px;
+            }
+        }
+    }
+    .trip_section{
+        .trip_container{
+            grid-template-columns: 1fr 1.5fr;
+            grid-row-gap:30px;
+            grid-column-gap:40px;
+            .trip_info{
+                padding:0;
+            }
+            .trip_item1{
+                grid-column:2/3;
+                grid-row:3/4;
+            }
+            .trip_item3{
+                grid-column:2/3;
+                grid-row:2/3;
+            }
+            .trip_item2{
+                grid-column:2/3;
+                grid-row:1/2;
+            }
+        }
+    }
+    .footer{
+        .footer_container{
+            position:relative;
+            padding-bottom:100px;
+            .copyright_part{
+                position:absolute;
+                bottom:0;
+                left:50%;
+                transform:translateX(-50%);
+            }
+        }
+    }
+}
+@media only screen and (max-width:725px){
+    .hotel_section{
+        .hotel_container{
+            .hotel_items{
+                .hotel_item{
+                    margin:0 15px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:612px){
+    .hero_section{
+        .hero_container{
+            .header{
+                .header_headline{
+                    h1{
+                        font: 400 24px/38px Open Sans;
+                    }
+                    .circle{
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+            }
+            .hero_info{
+                width:70%;
+                h2{
+                    font: 400 45px/49px Julius Sans One;
+                    font-weight: bold;
+                }
+                p{
+                    margin-top: 35px;
+                    font: 400 16px/27px Karma;
+                }
+                a{
+                    margin-top:35px;
+                    font: 400 13px/19px Open Sans;
+                    padding:10px 25px;
+                }
+            }
+        }
+    }
+    .hotel_section{
+        .hotel_container{
+            .hotel_items{
+                .hotel_item{
+                    .hotel_info{
+                        p{
+                            padding:0 10px;
+                            font: 400 18px/24px Karma;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:570px){
+    .container{
+        width:90% !important;
+    }
+    .trip_section{
+        .trip_container{
+            grid-template-columns: 1fr;
+            grid-row-gap:30px;
+            grid-column-gap:0;
+            .trip_info{
+                padding:0;
+                max-width:300px;
+                margin:auto;
+            }
+            .trip_item1{
+                grid-column:1/2;
+                grid-row:6/7;
+            }
+            .trip_item3{
+                grid-column:1/2;
+                grid-row:4/5;
+            }
+            .trip_item2{
+                grid-column:1/2;
+                grid-row:2/3;
+            }
+        }
+    }
+}
+@media only screen and (max-width:555px){
+    // .header_list{
+    //     display:none !important;
+    // }
+    .hero_section{
+        .hero_container{
+            .header{
+                flex-flow:column;
+                margin-top:20px;
+            }
+            .header_list_container{
+                margin-top:10px;
+                width:100%;
+                justify-content:flex-end;
+                .header_list{
+                    display:none !important;
+                }
+            }
+        }
+    }
+    .hotel_section{
+        .hotel_container{
+            .hotel_items{
+                .hotel_item{
+                    margin:0 10px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:485px){
+    .hotel_section{
+        .hotel_container{
+            .hotel_items{
+                .hotel_item{
+                    .hotel_info{
+                        p{
+                            padding:0 20px;
+                            font: 400 20px/24px Karma;
+                        }
+                    }
                 }
             }
         }

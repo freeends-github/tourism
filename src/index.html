@@ -36,7 +36,7 @@
     <section class="about_section">
       <div class="about_container container">
           <nav class="about_img">
-            <img src="./img/Mask Group 2.png" alt="">
+            <img src="./img/Mask Group 2@2x.png" alt="">
           </nav>
           <nav class="about_info">
             <h2>ABOUT</h2>
@@ -50,21 +50,21 @@
           <nav class="trip_imgs">
             <img src="./img/pointer.png" alt="">
           </nav>
-          <nav class="trip_info trip_item">
+          <nav class="trip_info trip_item1">
             <h2>PLANE</h2>
             <p>Sandstorms have traditionally been a problem for Beijing and for the northern part of China.</p>
           </nav>
           <nav class="trip_imgs">
             <img src="./img/map.png" alt="">
           </nav>
-          <nav class="trip_info">
+          <nav class="trip_info trip_item2">
             <h2>POINTER</h2>
             <p>Li said he hoped Beijing’s latest air pollution crisis would also remind the public that while.</p>
           </nav>
           <nav class="trip_imgs">
             <img src="./img/plane.png" alt="">
           </nav>
-          <nav class="trip_info">
+          <nav class="trip_info trip_item3">
             <h2>MAP</h2>
             <p>Last December tens of thousands of smog refugees were forced to flee China’s pollution-stricken.</p>
           </nav>
@@ -184,10 +184,49 @@
          $(document).ready(function(){
           $('.hotel_items').slick({
               infinite: true,
+              adaptiveHeight:true,
               slidesToShow: 3,
               slidesToScroll: 1,
               prevArrow : $('.left_arrow'),
-              nextArrow:$('.right_arrow')
+              nextArrow:$('.right_arrow'),
+               responsive: [
+    {
+      breakpoint: 1080,
+      settings: {
+        centerMode:true,
+        adaptiveHeight:true,
+        slidesToShow:2
+      }
+    },
+    {
+      breakpoint: 871,
+      settings: {
+        slidesToShow: 2,
+        adaptiveHeight:true,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 730,
+      settings: {
+        slidesToShow: 1,
+        adaptiveHeight:true,
+        centerMode:true,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint:555,
+      settings: {
+        adaptiveHeight:true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
           });
       });
     </script>
