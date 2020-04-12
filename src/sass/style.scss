@@ -25,6 +25,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     position:fixed;
     z-index:10;
     clip-path: circle(100px at 0% -20%);
+    -webkit-clip-path:circle(100px at 0% -20%);
     transition:all 1s ease-out;
     pointer-events:none;
     display:none;
@@ -65,6 +66,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     }
     &.open2{
         clip-path: circle(1000px at 10% -10%);
+        -webkit-clip-path:circle(100px at 0% -20%);
         pointer-events:all;
     }
 }
@@ -789,7 +791,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             height:unset;
             .about_img{
                 width:50%;
-                img
             }
             .about_info{
                 width:85%;
