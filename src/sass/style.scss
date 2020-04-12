@@ -452,6 +452,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             .places_info-2{
                 display:none;
             }
+            button{
+                display:none;
+            }
         }
     }
     .places_container{
@@ -786,6 +789,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             height:unset;
             .about_img{
                 width:50%;
+                img
             }
             .about_info{
                 width:85%;
