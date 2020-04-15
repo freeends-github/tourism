@@ -1,0 +1,54 @@
+<footer class="footer container">
+    <div>
+        <div class="links">
+   <a href="">Terms</a>
+   <a href="">Privacy</a>
+   <a href="">Help</a>
+</div>
+<div class="tourism">
+   <h3>Tourism</h3>
+   <p>© 2018 Tourism. All rights reserved.</p>
+</div>
+   <div class="social-media">
+      <a href="">
+   <img src="../img/twitter.png" alt=""></a>
+   <a href=""><img src="../img/facebook.png" alt=""></a>
+</div>
+</div>
+</footer>
+<script src="js/all.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script>
+   $(document).ready(function(){
+    $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              prevArrow: $('.prev'),
+        nextArrow: $('.next')
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              prevArrow: $('.prev'),
+        nextArrow: $('.next')
+            }
+          }
+        ]
+  });
+});
+</script>
+</body>
+</html>
