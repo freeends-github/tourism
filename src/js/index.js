@@ -12,17 +12,28 @@ var search = document.querySelector('.search_button');
 var input = document.querySelector('.search input');
 var list = document.querySelector('.link_vanish');
 
+
 search.addEventListener("click",function(){
 	input.classList.toggle("open");
-	list.classList.toggle("vanish");
+	// list.classList.toggle("vanish");
 	search.classList.toggle("rotate");
 	input.value = "";
+	if(input.classList.contains("open")){
+		list.style.display = "none";
+	}
+	else {
+		setTimeout(function() {
+			list.style.display = "flex";
+		}, 700);
+	}
 });
 
 var hamburger = document.querySelector('.hamburger_button');
 var pop = document.querySelector('.pop_list_container');
 var body = document.querySelector('body');
-var lines = document.querySelectorAll('.hamburger div')
+var lines = document.querySelectorAll('.hamburger div');
+var link = document.querySelector('.pop_list li a');
+
 
 hamburger.addEventListener("click",function(){
 	pop.classList.toggle("open2");
@@ -31,6 +42,11 @@ hamburger.addEventListener("click",function(){
 		line.classList.toggle("change");
 	})
 });
+
+// link.addEventListener("click",function(){
+// 	pop.classList.remove("open2");
+// });
+
 
 var imgs = document.querySelectorAll('.places_img');
 // var info = document.querySelector('.places_info-2');
