@@ -25,8 +25,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background-color:#212121;
     position:fixed;
     z-index:10;
-    clip-path: circle(100px at 0% -20%);
     -webkit-clip-path:circle(100px at 0% -20%);
+    clip-path: circle(100px at 0% -20%);
     transition:all 1s ease-out;
     pointer-events:none;
     display:none;
@@ -51,8 +51,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         }
     }
     &.open2{
-        clip-path: circle(1200px at 10% -10%);
-        -webkit-clip-path:circle(1200px at 0% -20%);
+        -webkit-clip-path:circle(142vh at 0% -20%);
+        clip-path: circle(142vh at 10% -10%);
         pointer-events:all;
     }
 }
@@ -100,12 +100,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                         border:none;
                         display:none;
                         position:relative;
-                        left:0;
-                        top:-5px;
                         z-index:11;
                         cursor: pointer;
+                        width:20px;
+                        height:20px;
                         .hamburger{
                             position:relative;
+                            width:20px;
+                            height:20px;
                             .first_line{
                                 position:absolute;
                                 width:21px;
@@ -617,6 +619,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
                     .hotel_paragraph{
                         h2{
                             font: 400 23px/31px Julius Sans One;
+                            font-weight:bolder;
                             letter-spacing: 2.76px;
                             color: #212121;
                             opacity: 1;
